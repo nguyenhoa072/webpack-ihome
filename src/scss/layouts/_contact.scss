@@ -1,0 +1,32 @@
+.contact {
+    #contact_map {
+        height: 500px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .map {
+        position: relative;
+
+        .address {
+            @include media-breakpoint-up(md) {
+                width: 400px;
+                position: absolute;
+                top: 67px;
+                right: 10px;
+                z-index: 2;
+            }
+
+            li {
+                cursor: pointer;
+                background-color: #fff;
+                padding: 15px;
+            }
+
+            li + li {
+                border-top: 1px solid #ddd;
+                padding-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+$enable-responsive-font-sizes: true;
+
+$color: #ffbb16;
+$white: #fff;
+$baclk: #000;
+
+$roboto: "Roboto", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+$color_fpt_blue: #1569b2 !default;
+$color_fpt_orange: #f27228 !default;
+$color_fpt_green: #24b24b !default;
+
+$primary: $color_fpt_blue !default;
+$info: $color_fpt_orange !default;
+
+$hd-bgc: #000;
+$hd-color: #000;
+$ft-bgc: $color_fpt_orange;
+$ft-color: #fff;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1200px,
+);
+
+$border-radius: 0 !default;
+$border-radius-lg: 0 !default;
+$border-radius-sm: 0 !default;
+
+$btn-border-radius:           $border-radius !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius-sm:        $border-radius-sm !default;
+
+$input-border-radius:                   $border-radius !default;
+$input-border-radius-lg:                $border-radius-lg !default;
+$input-border-radius-sm:                $border-radius-sm !default;

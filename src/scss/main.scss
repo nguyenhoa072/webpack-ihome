@@ -1,0 +1,13 @@
+@import './fonts';
+@import './variables';
+@import "~bootstrap/scss/bootstrap";
+@import "animate.css/animate.css";
+
+$slick-font-path: "~slick-carousel/slick/fonts/" !default;
+$slick-loader-path: "~slick-carousel/slick/" !default;
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+@import './mixins';
+@import './components';
+@import './layouts/_index';

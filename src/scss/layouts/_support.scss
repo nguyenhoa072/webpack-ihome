@@ -1,0 +1,37 @@
+.support {
+    .btn-link {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+        text-transform: initial;
+        color: #000;
+    }
+    [class*="fa-"] {
+        color: #a0cc00;
+    }
+    .fa-plus {
+        display: none;
+    }
+    .collapsed {
+        .fa-minus {
+            display: none;
+        }
+        .fa-plus {
+            display: inline-block;
+        }
+    }
+    &-help {
+        background-image: url(../images/support/banner.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        .welcome {
+            background-color: #f1592a;
+        }
+    }
+    .card-body {
+        padding-left: 59px;
+        padding-right: 59px;
+    }
+}

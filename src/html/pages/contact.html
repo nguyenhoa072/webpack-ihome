@@ -1,0 +1,96 @@
+${require('../templates/header.html')}
+<div class="contact">
+    <div class="map">
+        <div class="address">
+            <ul class="list-unstyled m-0" id="listMapID" data-map-lat="10.754018" data-map-lng="106.740176">
+                <li data-map-lat="10.754018" data-map-lng="106.740176">
+                    <p><strong>FPT Telecom International</strong></p>
+                    <p class="m-0"><b>Adress:</b> Lot L.29B-31B-33B, Street Tan Thuan, Tan Thuan EPZ, East Tan Thuan
+                        Ward, District 7, HCM City, Vietnam.
+                        <br><b>Hotline:</b> <a href="tel:1900 6973">1900 6973</a>
+                    </p>
+                </li>
+                <li data-map-lat="21.028435371671726" data-map-lng="105.78058935714716">
+                    <p><strong>Viễn thông Quốc tế FPT</strong></p>
+                    <p class="m-0"><b>Adress:</b> Floor 12A, TNR Building, 54A Nguyen Chi Thanh, Ba Dinh District,
+                        Hanoi, Vietnam.
+                        <br><b>Hotline:</b> <a href="tel:1900 6973">1900 6973</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div id="contact_map"></div>
+    </div>
+    <div class="container">
+        <div class="text-center">
+            <h4 class="mt-lg-5 mt-4">Questions about FPT E-INVOICE? Call our Customer Support Center.</h4>
+            <h4 class="my-2 font-weight-normal">
+                Technical support <strong class="color font-weight-bold">1800 6973</strong></h4>
+            <h4 class="my-2 font-weight-normal">Sales center <strong class="color">1800 6973</strong></h4>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="text-center">
+                    <h4 class="my-5 my-4 font-weight-normal">Or fill in the form below. We are here to assist you and
+                        always try to respond
+                        to all questions as soon as possible.</h4>
+                </div>
+                <form>
+                    <div class="form-group row">
+                        <label for="emal" class="col-sm-3 col-form-label">Email <span class="color">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control form-control-lg" id="staticEmail">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="emal" class="col-sm-3 col-form-label">Contact <span class="color">*</span></label>
+                        <div class="col-sm-9">
+                            <select class="custom-select custom-select-lg">
+                                <option value="1">Technical support</option>
+                                <option value="2">Sales center</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="phone" class="col-sm-3 col-form-label">Phone <span class="color">*</span></label>
+                        <div class="col-sm-9">
+                            <div class="input-group input-group-lg">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">+84</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="phone" class="col-sm-3 col-form-label">Your question <span
+                                class="color">*</span></label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control form-control-lg" id="" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-9 offset-sm-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">
+                                    I accept terms and privacy</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-9 offset-sm-3">
+                            google authen
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-9 offset-sm-3">
+                            <button type="button" class="btn btn-info px-5">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+${require('../templates/footer.html')}

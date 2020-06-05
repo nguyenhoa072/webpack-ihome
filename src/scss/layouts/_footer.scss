@@ -1,0 +1,54 @@
+.footer-top {
+    background-color: #262c3b;
+    color: #fff;
+    font-weight: 300;
+    .title {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+    .address {
+        a {
+            color: rgb(250, 197, 28);
+            &:hover {
+                color: #c98e00;
+                text-decoration: none;
+            }
+        }
+    }
+    .social {
+        a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            display: block;
+            color: #fff;
+            padding-top: 10px;
+            &:hover {
+                background-color: #fff;
+                color: #212529;
+            }
+        }
+    }
+    .about-ihome {
+        .lead {
+            span {
+                color: rgb(250, 197, 28);
+            }
+        }
+    }
+}
+
+#footer {
+    background-color: #12151c;
+    color: $ft-color;
+    font-weight: 300;
+    a {
+        color: $white;
+    }
+    .copyright {
+        color: #6c757d;
+    }
+}

@@ -1,0 +1,94 @@
+${require('../templates/header.html')}
+<div class="container">
+    <div class="register my-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-9">
+                <div class="text-center">
+                    <h4 class="title-1">Get your account now!</h4>
+                    <h4 class="my-5 font-weight-normal">Let us contact you. <br>
+                        Fill in your contact information below, and we will get you up-and-running
+                        with the E-Invoice: </h4>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6 form-group pr-sm-2">
+                            <input type="text" class="form-control form-control-lg" id="" placeholder="First name *"
+                                required>
+                        </div>
+                        <div class="col-sm-6 form-group pl-sm-2">
+                            <input type="text" class="form-control form-control-lg is-invalid" id=""
+                                placeholder="Last name *" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="" placeholder="Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg is-invalid">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">+84</span>
+                            </div>
+                            <input type="text" class="form-control is-invalid" placeholder="Phone number *" required>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="" placeholder="Company name">
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input is-invalid" id="customCheck1" required>
+                            <label class="custom-control-label" for="customCheck1">
+                                I accept terms and privacy</label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        google authen
+                    </div>
+                    <button type="submit" class="btn btn-info px-5" data-toggle="modal"
+                        data-target="#registerModal">Submit</button>
+                </form>
+                <div class="text-center mt-5">
+                    <h5>Or call us now </h5>
+                    <h4 class="color">18006973</h4>
+                    <h5 class="font-weight-normal">Our sales will consult you about the service and help you choose the
+                        right package.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn btn-info btn-sm ml-auto" data-dismiss="modal">
+                    <i class="fa fa-times fa-lg"></i></button>
+            </div>
+            <div class="modal-body pb-5">
+                <div class="text-center">
+                    <h4 class="color font-weight-bold mb-4">Thank you!</h4>
+                    <h5 class="font-weight-normal">
+                        Your account registration request has been successfully sent! <br>
+                        We will respond as soon as possible.
+                    </h5>
+                    <h5 class="font-weight-normal mt-5">Can’t wait? Call us now</h5>
+                    <h3 class="color font-weight-bold my-4">18006973</h3>
+                    <h4 class="font-weight-normal">
+                        Our sales will consult you about the service and help <br>
+                        you choose the right package.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+${require('../templates/footer.html')}
