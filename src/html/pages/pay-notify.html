@@ -1,0 +1,112 @@
+${require('../templates/header-vn.html')}
+${require('../templates/banner-vn.html')}
+
+<div class="pay my-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-9">
+                <div class="text">
+                    <p>Bạn đã chọn mua <b>Thiết bị cảnh báo đột nhập iHome</b></p>
+                    <p>Số lượng: <b>02</b></p>
+                    <p>Đơn giá: <b><span class="unit-price">200.000</span> đ</b></p>
+                </div>
+                <h2 class="mb-4">Vui lòng chọn phương thức thanh toán:</h2>
+                <div class="row">
+                    <div class="col-md-6 pr-lg-4 mb-4 mb-md-0">
+                        <div class="card vnpay h-100 active">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="card-title">Thanh toán qua cổng VNPAY</h5>
+                                    <div class="border-bottom py-4 mx-5 mb-3">
+                                        <img src="../../images/orther/vnpayqr.png" alt="" height="34">
+                                    </div>
+                                </div>
+                                <ul class="m-0">
+                                    <li>Quét mã VNPay qua Mobile Banking</li>
+                                    <li>Thả ATM và tài khoản ngân hàng</li>
+                                    <li>Thẻ thanh toán quốc tế</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pl-lg-4">
+                        <div class="card momo h-100">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="card-title">Thanh toán qua cổng VNPAY</h5>
+                                    <div class="border-bottom py-3 mx-5 mb-3">
+                                        <img src="../../images/orther/momo.png" alt="" height="50">
+                                    </div>
+                                </div>
+                                <ul class="m-0">
+                                    <li>Quét mã QR trên ứng dụng MoMo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center my-5">
+                    <!-- <button type="button" class="btn btn-secondary btn-lg px-4">Quay lại trang chủ</button> -->
+                    <a href="index.html" class="btn btn-secondary btn-lg px-4" data-toggle="modal"
+                        data-target="#successfulTransactionModal">Giao dịch thành công</a>
+                    <a href="index.html" class="btn btn-secondary btn-lg px-4" data-toggle="modal"
+                        data-target="#transactionFailedModal">Giao dịch không thành công</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="successfulTransactionModal" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary justify-content-center">
+                <h5 class="modal-title text-white" id="staticBackdropLabel">
+                    Thông tin giao dịch
+                </h5>
+            </div>
+            <div class="modal-body pay-success">
+                <div class="text-center py-4 mb-3 bg">Giao dịch thành công !</div>
+                <div class="row justify-content-center mb-2">
+                    <div class="col-6">
+                        <a href="index.html" class="btn btn-secondary btn-block">Quay lại trang chủ</a>
+                    </div>
+                    <div class="col-6">
+                        <!-- <button type="button" class="btn btn-info btn-block">Tiếp tục</button> -->
+                        <a href="product.html" class="btn btn-info btn-block">Tiếp tục mua sắm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="transactionFailedModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary justify-content-center">
+                <h5 class="modal-title text-white" id="staticBackdropLabel">
+                    Thông tin giao dịch
+                </h5>
+            </div>
+            <div class="modal-body pay-fail">
+                <div class="text-center py-4 mb-3 bg">Giao dịch thành công !</div>
+                <div class="row justify-content-center mb-2">
+                    <div class="col-6">
+                        <a href="index.html" class="btn btn-secondary btn-block">Quay lại trang chủ</a>
+                    </div>
+                    <div class="col-6">
+                        <!-- <button type="button" class="btn btn-info btn-block">Tiếp tục</button> -->
+                        <a href="product.html" class="btn btn-info btn-block">Tiếp tục mua sắm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+${require('../templates/footer-vn.html')}

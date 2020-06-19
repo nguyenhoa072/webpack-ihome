@@ -111,9 +111,9 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpe?g|gif|svg|ico)$/,
+                test: /\.(png|jpe?g|gif|ico)$/,
                 // exclude: /(node_modules|bower_components)/,
-                // exclude: [/font/, /fonts/],
+                exclude: [/font/, /fonts/],
                 use: {
                     loader: "file-loader",
                     options: {
@@ -124,8 +124,8 @@ module.exports = {
                 },
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
-                // exclude: [/img/, "/images/"],
+                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+                exclude: [/img/, "/images/"],
                 use: {
                     loader: "file-loader",
                     options: {

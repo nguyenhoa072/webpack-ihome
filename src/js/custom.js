@@ -1,80 +1,58 @@
 /* global google */
 
 import jQuery from "jquery";
-import { WOW } from "wowjs";
 import "slick-carousel";
+import "readmore-js";
 
 var $ = jQuery.noConflict();
 
-jQuery(document).ready(function () {
-
-    ourCustomersSider.init();
-
-    scroll_top.init();
-
-    initMap.init();
-
-    $('[data-toggle="tooltip"]').tooltip();
-
-    var wow = new WOW({
-        live: false,
-    });
-    wow.init();
-});
-
-var scroll_top = {
-    init: function () {
-        //Check to see if the window is top if not then display button
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                $(".scroll-top").fadeIn();
-            } else {
-                $(".scroll-top").fadeOut();
-            }
-        });
-
-        // Click event to scroll to top
-        $(".scroll-top").click(function () {
-            $("html, body").animate({ scrollTop: 0 }, 800);
-            return false;
-        });
+var isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (
+            isMobile.Android() ||
+            isMobile.BlackBerry() ||
+            isMobile.iOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows()
+        );
     },
 };
 
-// var menu_services = {
-//     init: function () {
-//         $(".dropdown-menu a").on("click", function () {
-//             // e.preventDefault();
-//             var hash = this.hash;
-//             $("html, body").animate(
-//                 {
-//                     scrollTop: $(this.hash).offset().top,
-//                 },
-//                 1000,
-//                 function () {
-//                     window.location.hash = hash;
-//                 }
-//             );
-//         });
-//     },
-// };
+jQuery(document).ready(function () {
+    ourCustomersSlider.init();
+    productShowSlider.init();
+    initMap.init();
+    if (isMobile.any()) {
+        initReadmore.init();
+    }
+});
 
-// var pricing_contact_us = {
-//     init: function () {
-//         var a = -($("#pricing_contact_us").outerWidth() / 2);
-//         var b = -($("#pricing_contact_us").outerHeight() / 2);
-
-//         $("#pricing_contact_us").css({ "margin-top": b, "margin-left": a });
-//     },
-// };
-
-// var services_features_zise = {
-//     init: function () {
-//         var d = $("#services_features li").outerWidth();
-
-//         $("#services_features li").css("height", d);
-//     },
-// };
+var initReadmore = {
+    init: function () {
+        $("#readmore").readmore({
+            collapsedHeight: 48,
+            speed: 200,
+            moreLink:
+                '<a href="#">Xêm thêm <i class="fa fa-caret-down"></i></a>',
+            lessLink: '<a href="#">Đóng <i class="fa fa-caret-up"></i></a>',
+        });
+    },
+};
 
 var initMap = {
     init: function () {
@@ -116,39 +94,97 @@ var initMap = {
     },
 };
 
-// var offcanvas = {
-//     init: function () {
-//         $('[data-toggle="offcanvas"]').on("click", function () {
-//             $(".offcanvas-collapse").toggleClass("open");
-//             $("body").toggleClass("toggled");
-//         });
-//     },
-// };
-
-var ourCustomersSider  = {
+var ourCustomersSlider = {
     init: function () {
         $("#talk_about_ihome_sider").slick({
             centerMode: true,
-            dots: true,
-            centerPadding: "350px",
+            centerPadding: "450px",
             slidesToShow: 1,
+            arrows: true,
+            dots: true,
+            speed: 1500,
+            autoplaySpeed: 5000,
+            prevArrow:
+                '<div class="slick-prev"><svg class="bi bi-chevron-left" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">' +
+                '<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>' +
+                "</svg>" +
+                "</div >",
+            nextArrow:
+                '<div class="slick-next"><svg class="bi bi-chevron-right" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">' +
+                '<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>' +
+                "</svg></div>",
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 1600,
                     settings: {
-                        // arrows: false,
+                        arrows: true,
                         centerMode: true,
-                        centerPadding: "0px",
+                        centerPadding: "250px",
                         slidesToShow: 1,
                     },
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 1200,
                     settings: {
-                        // arrows: false,
+                        arrows: true,
                         centerMode: true,
-                        centerPadding: "0px",
+                        centerPadding: "150px",
                         slidesToShow: 1,
+                    },
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: "100px",
+                        slidesToShow: 1,
+                    },
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        arrows: true,
+                        centerMode: false,
+                        centerPadding: "50px",
+                        slidesToShow: 1,
+                    },
+                },
+            ],
+        });
+    },
+};
+
+var productShowSlider = {
+    init: function () {
+        $(".product .slider-for").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: ".slider-nav",
+            autoplay: true,
+            autoplaySpeed: 4000,
+        });
+        $(".product .slider-nav").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: ".slider-for",
+            focusOnSelect: true,
+            prevArrow:
+                '<div class="slick-prev"><svg class="bi bi-chevron-left" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">' +
+                '<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>' +
+                "</svg>" +
+                "</div >",
+            nextArrow:
+                '<div class="slick-next"><svg class="bi bi-chevron-right" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">' +
+                '<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>' +
+                "</svg></div>",
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
                     },
                 },
             ],

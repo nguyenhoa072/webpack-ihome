@@ -1,0 +1,31 @@
+.warranty-policy {
+    .one {
+        background-color: #eb8c4a;
+    }
+
+    .two {
+        background-color: #ffdb71;
+    }
+
+    .three {
+        background-color: #e5e5e5;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .content {
+            .form-row {
+                margin-left: -1px;
+                margin-right: -1px;
+            }
+
+            [class^="col-"] {
+                padding-left: 1px;
+                padding-right: 1px;
+            }
+
+            .mb-1 {
+                margin-bottom: 2px !important;
+            }
+        }
+    }
+}

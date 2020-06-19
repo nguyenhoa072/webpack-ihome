@@ -1,0 +1,232 @@
+${require('../templates/header-vn.html')}
+${require('../templates/banner-vn.html')}
+<div class="product my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 pr-md-4">
+                <div class="slider slider-for">
+                    <img src="../../images/product/product-1.jpg" alt="" class="img-fluid">
+                    <img src="../../images/product/product-2.jpg" alt="" class="img-fluid">
+                    <img src="../../images/product/product-3.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="d-block d-md-none">
+                    <div class="slider slider-nav">
+                        <img src="../../images/product/product-1.jpg" alt="" class="img-fluid">
+                        <img src="../../images/product/product-2.jpg" alt="" class="img-fluid">
+                        <img src="../../images/product/product-3.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pl-md-4 mt-4 mt-md-0">
+                <h1 class="h2">Thiết bị cảnh báo đột nhập FPT iHome <small>(Gắn trên các loại cửa )</small></h1>
+                <ul>
+                    <li>Tên thiết bị: FPT iHome</li>
+                    <li>Mã thiết bị: PK-V1</li>
+                </ul>
+                <p class="mb-2"><b>Tính năng chính:</b></p>
+                <ul class="m-0 overflow-hidden" id="readmore" style="transition: height 200ms;">
+                    <li>Kết nối với điện thoại thông qua ứng dụng trên hệ điều hành IOS/Android</li>
+                    <li>Tải App quản lý thiết bị dễ dàng trên Apple Store và Google Play</li>
+                    <li>Cảm biến thay đổi tình trạng cửa</li>
+                    <li>Báo động đồng thời trên thiết bị và điện thoại người dùng</li>
+                    <li>Chia sẻ thông tin cảnh báo cho người thân</li>
+                    <li>Thiết lập chông báo động tức thì</li>
+                    <li>Đặt lịch và cài đặt thời gian báo động</li>
+                    <li>Cuộc gọi và tin nhắn thông báo đột nhập</li>
+                    <li>Kết nối không dây qua chuẩn Internet Wifi 2.4 Ghz thông dụng trong gia      đình</li>
+                    <li>Sử dụng 2 viên Pin AAA , mua dễ dàng tại các siêu thị tiện lợi</li>
+                    <li>Một sản phẩm của FPT Telecom International</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="py-4 my-4" style="background-color: #e1e1e1;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 pr-md-4 d-none d-md-block">
+                    <div class="slider slider-nav">
+                        <img src="../../images/product/product-1.jpg" alt="" class="img-fluid">
+                        <img src="../../images/product/product-2.jpg" alt="" class="img-fluid">
+                        <img src="../../images/product/product-3.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-row align-items-center price">
+                        <div class="col-auto pl-4">
+                            <h5 class="m-0 price-text">Giá chỉ:</h5>
+                        </div>
+                        <div class="col-auto price-number">329.000 đ</div>
+                    </div>
+                    <div class="form-row align-items-center buy-now">
+                        <div class="col-auto text-right">
+                            <h5 class="mb-0 amount-text">Số lượng:</h5>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-row">
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-secondary" onclick="minus()">
+                                        <i class="fa fa-minus"></i></button>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control amount-number" placeholder="0"
+                                        onchange="amountNumber()" onkeypress="return isNumeric(event);"
+                                        id="amount_number">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-secondary" onclick="plus()">
+                                        <i class="fa fa-plus"></i></button>
+                                </div>
+                                <div class="col-auto">
+                                    <button id="buy_now" type="button" class="btn btn-info px-md-4" data-toggle="modal"
+                                        data-target="#staticBackdrop" disabled>Mua ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="my-4 my-lg-5">
+            <h2 class="mb-4">Thông tin sản phẩm</h2>
+            <h5>Thiết bị cảnh báo đột nhập FPT iHome</h5>
+            <p>
+                Một thiết bị cảm biến cửa do các chuyên gia đầu ngành về công nghệ cảm biến báo động của FPT Telecom –
+                Công ty thành viên trực thuộc tập đoàn công nghệ FPT, nghiên cứu và phát triển.
+            </p>
+            <p>
+                Thiết bị có khả năng phát hiện sự thay đổi tức thì của hệ thống cửa ra vào, cửa sổ trong căn nhà. Thiết
+                bị sẽ lập tức cảnh báo độc lập bằng âm thanh trên thiết bị để báo động cho chủ nhà , đồng thời gửi thông
+                báo kèm âm thanh đến các thiết bị di động mà thiết bị được đăng ký hoặc được phân quyền theo dõi.
+            </p>
+            <p>
+                Giúp gia tăng tính chủ động cho người dùng trong các tình huống có sự xâm nhập của ngoại vật hoặc tình
+                trạng cửa bị thay đổi bất ngờ bởi yếu tố con người từ bên trong hoặc ngoài ngôi nhà. Đặc biệt với các
+                gia đình có trẻ nhỏ, thiết bị giúp hạn chế rủi ro thấp nhất dành cho các bé khi chẳng may quên đóng cửa.
+            </p>
+            <p>Dễ dàng thiết lập khoảng thời gian phát âm thanh tiếng động, chia sẻ thiết bị với các thành viên trong
+                gia đình, lựa chọn cảnh bảo tức thì, kết nối dễ dàng thông qua hệ thống wifi sẵn có trong gia đình, ứng
+                dụng tương thích với mọi thiết bị điện thoại thông dụng sử dụng hệ điều hành IOS/Android. Thời gian hoạt
+                động của Pin lên tới 3 tháng, thay mới đơn giản bằng loại pin AAA thông dụng. FPT Ihome cung cấp 3
+                phương thức gửi cảnh báo đến người dùng thông qua: Tin nhắn từ ứng dụng, Tin nhắn SMS, Cuộc gọi Di động
+                AutoCall.</p>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary justify-content-center">
+                <h5 class="modal-title text-white" id="staticBackdropLabel">
+                    Quý khách vui lòng điền thông tin để mua hàng
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="exampleInputEmail1">Tên <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control is-invalid" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="exampleInputPassword1">Số điện thoại <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 form-group">
+                        <label for="exampleInputPassword1">Tỉnh/Thành phố <span class="text-danger">*</span></label>
+                        <select class="custom-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label for="exampleInputPassword1">Quận/Huyện <span class="text-danger">*</span></label>
+                        <select class="custom-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label for="exampleInputPassword1">Xã/Phường <span class="text-danger">*</span></label>
+                        <select class="custom-select is-invalid">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label for="exampleInputPassword1">Địa chỉ <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="modal-footer d-block">
+                <p class="lead text-center mt-0 mb-3">Xin cảm ơn</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 col-6">
+                        <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Hủy</button>
+                    </div>
+                    <div class="col-md-3 col-6  offset-md-1">
+                        <!-- <button type="button" class="btn btn-info btn-block">Tiếp tục</button> -->
+                        <a href="pay.html" class="btn btn-info btn-block">Tiếp tục</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var count = 0;
+    var amount_number = document.getElementById("amount_number");
+    var buy_now = document.getElementById("buy_now");
+
+    function isNumeric(e) {
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        var keyCode = e.which ? e.which : e.keyCode
+        var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+        return ret;
+    }
+
+    function amountNumber() {
+        count = amount_number.value;
+        if (count == 0) {
+            buy_now.disabled = true;
+        }
+        if (count > 0) {
+            buy_now.disabled = false;
+        }
+    }
+
+    function plus() {
+        count++;
+        amount_number.value = count;
+        buy_now.disabled = false;
+    }
+
+    function minus() {
+        if (count > 0) {
+            count--;
+            amount_number.value = count;
+            buy_now.disabled = false;
+        }
+        if (count == 0) {
+            buy_now.disabled = true;
+        }
+    }
+</script>
+${require('../templates/footer-vn.html')}

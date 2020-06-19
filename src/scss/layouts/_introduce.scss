@@ -1,0 +1,11 @@
+.introduce {
+    &-blockquote {
+        background: url(../images/introduce/Background-Quote.jpg) no-repeat center;
+        color: #fff;
+        text-align: center;
+        background-size: cover;
+    }
+    .blockquote-footer{
+        color: #ddd;
+    }
+}

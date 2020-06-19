@@ -1,0 +1,47 @@
+.agency {
+    @include media-breakpoint-up(md) {
+        .title {
+            font-size: 36px;
+        }
+    }
+    #contact_map {
+        height: 500px;
+        width: 100%;
+        z-index: 1;
+    }
+    .address {
+        li {
+            cursor: pointer;
+            background-color: #fff;
+            padding: 5px 15px;
+
+            & + li {
+                border-top: 1px solid #ebebeb;
+            }
+        }
+        .btn-light {
+            color: #26ad4a;
+            font-weight: 500;
+            background-color: #fff;
+        }
+
+        &-header {
+            background-color: #ebebeb;
+            padding: 8px 15px;
+        }
+        &-list {
+            height: 446px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border-bottom: 1px solid #ebebeb;
+            border-right: 1px solid #ebebeb;
+            border-left: 1px solid #ebebeb;
+        }
+        .fa-map-marker {
+            color: #26ad4a;
+        }
+        a {
+            color: #ea4335;
+        }
+    }
+}

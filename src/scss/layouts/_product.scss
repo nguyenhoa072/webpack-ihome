@@ -1,0 +1,93 @@
+.product {
+    .price-number {
+        font-size: 36px;
+        font-weight: 700;
+        color: #0b74cc;
+    }
+
+    .amount-number {
+        font-size: 30px;
+        font-weight: 500;
+        height: 38px;
+        text-align: right;
+        width: 90px;
+        border-color: #999;
+    }
+
+    .only-cost {
+        height: 54px;
+        line-height: 54px;
+    }
+
+    .buy-now {
+        .btn-secondary {
+            border-radius: 4px;
+        }
+    }
+
+    .slider-nav {
+        .slick-next,
+        .slick-prev {
+            font-size: initial;
+            width: auto;
+            height: auto;
+            color: #999;
+        }
+
+        .slick-next:before,
+        .slick-prev:before {
+            content: initial;
+        }
+
+        .slick-next:focus,
+        .slick-next:hover,
+        .slick-prev:focus,
+        .slick-prev:hover {
+            color: #666;
+        }
+
+        .slick-next {
+            right: -30px;
+        }
+
+        .slick-prev {
+            left: -30px;
+        }
+
+        .slick-slide {
+            div {
+                margin: 5px;
+            }
+
+            img {
+                filter: grayscale(70%);
+            }
+        }
+
+        .slick-current {
+            img {
+                filter: grayscale(0%);
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .price-number {
+            font-size: 30px;
+        }
+
+        .btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            border-radius: 0;
+        }
+
+        .amount-number {
+            width: 70px;
+            font-size: 24px;
+            height: 31px;
+            line-height: 31px;
+        }
+    }
+}

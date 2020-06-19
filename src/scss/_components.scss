@@ -1,216 +1,355 @@
-body {
-    font-family: $roboto;
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+.lead {
+    font-size: 1.2rem;
+}
+
+.modal-backdrop.show {
+    opacity: 0.35;
+}
+
+.img-hover {
+    overflow: hidden;
+}
+
+.img-hover img {
+    transition: 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.img-hover:hover img {
+    transform: scale(1.1);
 }
 
 .help-you {
-    // background: url(../../images/form-de-lai-thong-tin.jpg) no-repeat top right;
+    background: url(../images/banner/Background-Chung-toi-co-the-ho-tro-gi-cho-ban.jpg) no-repeat top
+        right;
     background-size: cover;
     padding: 100px 0;
     text-align: center;
-    .title {        
+
+    .title {
         font-weight: 900;
         margin-bottom: 50px;
         font-size: 36px;
     }
+
+    .btn {
+        font-weight: 300;
+    }
+
+    @include media-breakpoint-down(md) {
+        .title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
 }
 
-.hotline {
-    a {
-        color: $color_fpt_orange !important;
+.news {
+    .title {
+        font-weight: 900;
+        margin-bottom: 20px;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .card-title {
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        word-break: break-word;
+        overflow: hidden;
+        display: -webkit-box;
+
+        a {
+            color: #000;
+
+            &:hover {
+                color: $color_fpt_orange;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .card-text {
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        word-break: break-word;
+        overflow: hidden;
+        display: -webkit-box;
+    }
+
+    @include media-breakpoint-down(sm) {
+        &-list {
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .card-text {
+                -webkit-line-clamp: 2;
+                margin: 0;
+            }
+
+            .card-body {
+                padding-left: 0.85rem;
+            }
+        }
+    }
+}
+
+.talk-about-ihome {
+    background: url(../images/home/Background-Truyen-thong-noi-ve-iHome.jpg)
+        no-repeat top right;
+    background-size: cover;
+
+    .slick-track {
+        padding: 40px 0;
+    }
+
+    .slick-next,
+    .slick-prev {
+        z-index: 9999;
+        width: auto;
+        height: auto;
+        font-size: initial;
+    }
+
+    .slick-next:before,
+    .slick-prev:before {
+        content: initial;
+    }
+
+    .slick-next,
+    .slick-next:focus,
+    .slick-next:hover,
+    .slick-prev,
+    .slick-prev:focus,
+    .slick-prev:hover {
+        color: #fff;
+    }
+
+    .text {
+        text-align: center;
+        transition: all 0.8s ease-in-out;
+        opacity: 0;
+
+        h5 {
+            font-weight: 300;
+        }
+
+        p {
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            word-break: break-word;
+            overflow: hidden;
+            display: -webkit-box;
+        }
+    }
+
+    img {
+        filter: grayscale(100%);
+    }
+
+    .slick-current {
+        transform: scale(1.2);
+
+        .text {
+            opacity: 1;
+        }
+
+        img {
+            filter: grayscale(0%);
+        }
+    }
+
+    .slick-dots li,
+    .slick-dots li button {
+        width: 16px;
+        height: 16px;
+    }
+
+    .slick-dots li button:before {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-color: #999;
+        opacity: 1;
+        width: 16px;
+        height: 16px;
+        font-size: 0px;
+        padding: 0;
+    }
+
+    .slick-dots li button:focus:before,
+    .slick-dots li button:hover:before {
+        background-color: #666;
+        border-color: #666;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #fff;
+        background-color: #000;
+    }
+
+    .slick-slider .slick-slide {
+        outline: none !important;
+        transition: all 0.6s ease-in-out 0s;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .slick-prev {
+            left: 15%;
+        }
+
+        .slick-next {
+            right: 15%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .slick-slider .slick-slide {
+            margin: 0px 150px;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        .slick-prev {
+            left: 20%;
+        }
+
+        .slick-next {
+            right: 20%;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .slick-slider .slick-slide {
+            margin: 0px 100px;
+        }
+
+        .slick-prev {
+            left: 10%;
+        }
+
+        .slick-next {
+            right: 10%;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .slick-prev {
+            left: 7%;
+        }
+
+        .slick-next {
+            right: 7%;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .slick-prev {
+            left: 5%;
+        }
+
+        .slick-next {
+            right: 5%;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        .text h5 {
+            font-size: 16px;
+        }
+
+        .slick-slider .slick-slide {
+            margin: 0px 75px;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+    }
+}
+
+.network-socials-fixed {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 180px;
+    margin-right: -140px !important;
+    z-index: 9999;
+    transform: translateY(-50%);
+    background-color: #fff;
+
+    .item {
+        height: 38px;
+        margin-bottom: 1px;
+        background-color: #464646;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 
         &:hover {
+            transform: translateX(-110px);
+        }
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 3px;
+            height: 32px;
+            width: 32px;
+            text-align: center;
+            overflow: hidden;
+            color: #fff;
+            background-color: #464646;
+        }
+
+        a {
+            display: block;
+            color: #fff;
+            line-height: 32px;
             text-decoration: none;
-        }
-
-        strong {
-            font-size: 1.1rem;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            transition: all 0.3s ease;
         }
     }
-}
 
-.color {
-    color: $color;
-}
-
-.scroll-top {
-    @include scroll-top;
-    background: #fff;
-    border-radius: 50%;
-    width: 32px;
-    height: 34px;
-    text-align: center;
-}
-
-.bd-b {
-    position: relative;
-    border-bottom: 4px solid $color;
-
-    &::before,
-    &::after {
-        position: absolute;
-        content: "";
-        bottom: -4px;
-        width: 33.3333%;
-        border-bottom: 4px solid #15b04b;
+    .number {
+        text-transform: uppercase;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #fff;
     }
 
-    &::before {
+    @include media-breakpoint-down(sm) {
+        top: auto;
+        bottom: 0;
         left: 0;
-    }
-
-    &::after {
         right: 0;
-        border-color: #1068b0;
-    }
-}
-
-.arrow-ok {
-    @include li-arrow-ok;
-}
-
-.banner {
-    position: relative;
-
-    .carousel-item {
-        > div {
-            max-width: 1920px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-        }
-    }
-
-    &-detail {
-        @include media-breakpoint-up(md) {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: -1px;
-            position: absolute;
-            width: 100%;
-        }
-
-        &-inner {
-            // @include media-breakpoint-up(md) {
-            //     width: 400px;
-            // }
-
-            // @include media-breakpoint-up(lg) {
-            //     width: 410px;
-            // }
-
-            // @include media-breakpoint-up(xl) {
-            //     width: 430px;
-            // }
-
-            color: #1068b0;
-            // background-color: rgba(0, 0, 0, 0.6);
-
-            h4 {
-                line-height: 1.4;
-
-                @include media-breakpoint-down(sm) {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-}
-
-.banner-pricing {
-    .banner-detail-inner {
-        @include media-breakpoint-up(md) {
-            width: 300px;
-            height: 200px;
-        }
-        @include media-breakpoint-up(lg) {
-            width: 320px;
-            height: 250px;
-        }
-        @include media-breakpoint-up(xl) {
-            width: 390px;
-            height: 300px;
-        }
-    }
-}
-
-.ul-step {
-    li {
-        position: relative;
-        background-color: $color_fpt_orange;
-        color: $white;
-        padding: 7px 15px;
-        margin-bottom: 15px;
-        margin-left: 100px;
-
-        &::after {
-            position: absolute;
-            content: "";
-            width: 38px;
-            left: -63px;
-            top: 0;
-            bottom: 0;
-            border: 2px solid $color_fpt_orange;
-            z-index: -9;
-        }
-
-        span {
-            position: absolute;
-            left: -101px;
-            color: $color_fpt_orange;
-            top: 50%;
-            transform: translateY(-50%);
-            font-weight: 900;
-            font-size: 1.25rem;
-
-            &::before,
-            &::after {
-                position: absolute;
-                content: "";
-                left: 0px;
-                right: 0;
-                background: #fff;
-                height: 3px;
-            }
-
-            &::after {
-                bottom: 5px;
-            }
-
-            &::before {
-                top: 5px;
-            }
-        }
-    }
-}
-
-.title-1 {
-    color: $color_fpt_orange;
-    font-weight: 700;
-    text-align: center;
-    margin: 0 0 30px;
-    text-transform: uppercase;
-}
-
-.invoice-billing {
-    .form-control {
-        border-width: 2px;
-        border-color: $color_fpt_orange;
-    }
-}
-
-.youtube-embed-wrapper {
-    position: relative;
-    padding-bottom: 53.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
+        transform: translateY(0);
+        background-color: #464646;
+
+        .item {
+            float: left;
+            border-right: 1px solid #666;
+        }
+
+        .number {
+            display: none;
+        }
     }
 }
