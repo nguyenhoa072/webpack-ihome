@@ -40,6 +40,12 @@
         }
     }
 
+    .cash {
+        .card-title {
+            color: #3964cd;
+        }
+    }
+
     .active {
         border-color: #000 !important;
     }
@@ -50,20 +56,18 @@
 
     &-success {
         .bg {
-            font-size: 36px;
             color: #0b74cc;
             font-weight: 500;
             background: url(../images/orther/check-ok.png) no-repeat center;
             background-size: 100px;
-        }        
+        }
     }
 
     &-fail {
         .bg {
-            font-size: 36px;
             font-weight: 500;
             background: url(../images/orther/error.png) no-repeat center;
             background-size: 100px;
-        }   
+        }
     }
 }

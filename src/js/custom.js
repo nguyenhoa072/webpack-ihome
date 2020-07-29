@@ -34,6 +34,9 @@ var isMobile = {
 };
 
 jQuery(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    scrollTop.init();
+    sendRequestAdvice.init();
     ourCustomersSlider.init();
     productShowSlider.init();
     initMap.init();
@@ -41,6 +44,36 @@ jQuery(document).ready(function () {
         initReadmore.init();
     }
 });
+
+var scrollTop = {
+    init: function () {
+        //Check to see if the window is top if not then display button
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $(".scroll-top").fadeIn();
+            } else {
+                $(".scroll-top").fadeOut();
+            }
+        });
+
+        // Click event to scroll to top
+        $(".scroll-top").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+    },
+};
+
+var sendRequestAdvice = {
+    init: function () {
+        $("#sra_open").click(function () {
+            $("#send_request_advice").fadeIn();
+        });
+        $("#sra_exit").click(function () {
+            $("#send_request_advice").fadeOut();
+        });
+    },
+};
 
 var initReadmore = {
     init: function () {

@@ -26,8 +26,8 @@
 }
 
 .help-you {
-    background: url(../images/banner/Background-Chung-toi-co-the-ho-tro-gi-cho-ban.jpg) no-repeat top
-        right;
+    background: url(../images/banner/Background-Chung-toi-co-the-ho-tro-gi-cho-ban.jpg)
+        no-repeat top right;
     background-size: cover;
     padding: 100px 0;
     text-align: center;
@@ -284,45 +284,46 @@
 .network-socials-fixed {
     position: fixed;
     top: 50%;
-    right: 0;
-    width: 180px;
-    margin-right: -140px !important;
+    right: 5px;
+    // width: 180px;
+    // margin-right: -140px !important;
     z-index: 9999;
     transform: translateY(-50%);
-    background-color: #fff;
+    // background-color: #fff;
 
     .item {
-        height: 38px;
-        margin-bottom: 1px;
-        background-color: #464646;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        transition: all 0.3s ease;
+        // height: 38px;
+        // margin-bottom: 1px;
+        // background-color: #464646;
+        // transition: all 0.3s ease;
+
+        a {
+            display: block;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            color: #fff;
+            line-height: 32px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
         &:hover {
-            transform: translateX(-110px);
+            // transform: translateX(-110px);
+
+            a {
+                border-color: #e88948;
+            }
         }
 
         .icon {
             display: inline-block;
             vertical-align: middle;
-            margin: 3px;
+            margin: 4px;
             height: 32px;
             width: 32px;
             text-align: center;
             overflow: hidden;
-            color: #fff;
-            background-color: #464646;
-        }
-
-        a {
-            display: block;
-            color: #fff;
-            line-height: 32px;
-            text-decoration: none;
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            transition: all 0.3s ease;
+            // background-color: #464646;
         }
     }
 
@@ -331,25 +332,116 @@
         display: inline-block;
         vertical-align: middle;
         font-size: 14px;
-        color: #fff;
+        color: #000;
     }
 
-    @include media-breakpoint-down(sm) {
-        top: auto;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        transform: translateY(0);
-        background-color: #464646;
+    // @include media-breakpoint-down(sm) {
+    //     top: auto;
+    //     bottom: 10px;
+    //     left: 10px;
+    //     transform: translateY(0);
+    //     background-color: #464646;
 
-        .item {
-            float: left;
-            border-right: 1px solid #666;
+    //     .item {
+    //         float: left;
+    //         border-right: 1px solid #666;
+    //     }
+
+    //     .number {
+    //         display: none;
+    //     }
+    // }
+}
+
+.scroll-top {
+    @include scroll-top;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #000;
+    z-index: 9999;
+}
+
+.calling {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    img {
+        max-width: 85%;
+    }
+
+    @include media-breakpoint-down(lg) {
+        img {
+            max-width: 65%;
         }
+    }
 
-        .number {
-            display: none;
+    @include media-breakpoint-down(md) {
+        img {
+            max-width: 40%;
+        }
+    }
+}
+
+.sra-p {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #77ad59;
+    color: #fff;
+    border-top-left-radius: 15px;
+    cursor: pointer;
+}
+
+.send-request-advice {
+    display: none;
+    z-index: 99999;
+    border-top-left-radius: 15px;
+    max-width: 320px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-left: 2px solid #77ad59;
+
+    .input-group-text {
+        background-color: #fff;
+        border-right-color: transparent;
+    }
+
+    .form-control {
+        border-left-color: transparent;
+    }
+
+    .sra-header {
+        border-top-left-radius: 15px;
+        background-color: #77ad59;
+        color: #fff;
+        margin: 0;
+        position: relative;
+        letter-spacing: 1px;
+
+        .sra-exit {
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            color: #000;
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+        }
+    }
+    .sra-body {
+        background-color: #fff;
+
+        .text-1 {
+            background-color: #f3bd0f;
+            color: #fff;
+            border-radius: 5px;
         }
     }
 }
